@@ -29,4 +29,15 @@ final class StringCalculatorTest extends TestCase
         $result = $calculator->add("");
         $this->assertEquals(0, $result);
     }
+
+    /**
+     * @test
+     */
+    public function givenAStringReturnsFirstNumber(): void
+    {
+        $calculator = new StringCalculator();
+        $result = $calculator->add("1,2");
+        $this->assertEquals(1, $result);
+
+    }
 }

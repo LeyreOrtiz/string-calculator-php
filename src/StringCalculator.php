@@ -9,7 +9,7 @@ class StringCalculator
         if(empty($numbers)){
             return 0;
         }
-        return 1;
+        return intval($numbers);
     }
 
 }
