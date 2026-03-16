@@ -26,6 +26,27 @@
 8. Permite múltiples delimitadores de la siguiente manera: "//[delim1][delim2]\n". Por ejemplo: "//[*][%]\n1*2%3" debe dar como resultado 6.
 9. Asegúrate de que puedes manejar delimitadores de cualquier longitud mayor de un caracter.
 
+### Ejecución con Docker:
+
+```bash
+# Construir la imagen
+docker build -t string-calculator-php .
+
+# Entrar al contenedor
+# Al entrar, si no existe vendor/, se instala automáticamente
+docker run -it -v "$(pwd)":/app string-calculator-php bash
+
+# Ejecutar los tests dentro del contenedor
+vendor/bin/phpunit
+```
+
+### Ejecución local (requiere PHP 8.3+):
+
+```bash
+composer install
+vendor/bin/phpunit
+```
+
 ## Créditos
 
 [Kata original](http://osherove.com/tdd-kata-1/)
