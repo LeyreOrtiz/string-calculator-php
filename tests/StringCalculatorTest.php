@@ -32,19 +32,13 @@ final class StringCalculatorTest extends TestCase
     /**
      * @test
      */
-    public function givenAStringReturnsFirstNumber(): void
+    public function givenAStringWithNumberOneAndACommaReturnsOne(): void
     {
         $calculator = new StringCalculator();
-        $result = $calculator->add("1,2");
+        $result = $calculator->add("1,");
         $this->assertEquals(1, $result);
 
     }
 
-    /**
-     * @test
-     */
-    public function givenAStringReturnsNumberOfElements(): void
-    {
 
-    }
 }
