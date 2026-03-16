@@ -9,7 +9,12 @@ class StringCalculator
         if(empty($numbers)){
             return 0;
         }
-        return intval($numbers);
+        $numbersArray = explode(",", $numbers);
+        if(count($numbersArray) > 1){
+            return $numbersArray[0];
+        }
+
+
     }
 
 }
