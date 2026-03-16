@@ -12,11 +12,11 @@ final class StringCalculatorTest extends TestCase
     /**
      * @test
      */
-    public function testHelloWorld(): void
+    public function testReturnsNumberOne(): void
     {
         $calculator = new StringCalculator();
         $result = $calculator->add("1");
-        $this->assertEquals(2, $result);
+        $this->assertEquals(1, $result);
 
     }
 }
