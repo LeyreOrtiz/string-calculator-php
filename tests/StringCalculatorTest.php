@@ -40,5 +40,13 @@ final class StringCalculatorTest extends TestCase
 
     }
 
+    /**
+     * @test
+     */
+    public function givenAStringWithNumberTwoAndACommaReturnsTwo(): void
+    {
+
+    }
+
 
 }
